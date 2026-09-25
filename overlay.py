@@ -134,7 +134,7 @@ def draw_overlay(photo, chosen_date, chosen_time, opacity=0.66, location=LOCATIO
         layer.alpha_composite(resized,(x,y))
     asset('map.jpeg',(0,56,290,290),14)
     asset('gps.jpeg',(962,0,262,54),10)
-    rect((854,19,947,49),6,(35,35,35,235))
+  
 
     records=[]
     def text(text, box, size, lines=1):
