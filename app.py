@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from PIL import Image, ImageDraw, ImageFont
 from io import BytesIO
@@ -11,6 +12,10 @@ st.caption("Uses the supplied GPS Camera and map graphics as a fixed template. D
 BASE = os.path.dirname(os.path.abspath(__file__))
 GPS_PATH = os.path.join(BASE, "gps.jpeg")
 MAP_PATH = os.path.join(BASE, "map.jpeg")
+
+if not os.path.exists(GPS_PATH) or not os.path.exists(MAP_PATH):
+    st.error("gps.jpeg and map.jpeg must be in the same GitHub folder as app.py.")
+    st.stop()
 
 # Fixed template values taken from the supplied reference image.
 LOCATION = "Isarwada, Gujarat, India 🇮🇳"
