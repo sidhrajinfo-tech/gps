@@ -135,7 +135,7 @@ def draw_overlay(photo, chosen_date, chosen_time, opacity=0.66, location=LOCATIO
     asset('map.jpeg',(0,56,290,290),14)
     asset('gps.jpeg',(962,0,262,54),10)
     rect((854,19,947,49),6,(35,35,35,235))
-    d.text((865*q,24*q),'EDITED',font=font(19*q),fill='white',anchor='lt')
+    d.text((865*q,24*q),'',font=font(19*q),fill='white',anchor='lt')
     records=[]
     def text(text, box, size, lines=1):
         x,y,w,h=box
